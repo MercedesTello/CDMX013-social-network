@@ -1,8 +1,217 @@
-html{
-    
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
 }
 
 body {
-    padding: 0;
-    margin: 0;
+
+    background-image: url("./image/tacos.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+
+.sectionOfWelcome {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 776px;
+    grid-template-areas:
+        "header"
+        "main";
+
+    /* gap: 20px; */
+}
+
+.header {
+    grid-area: header;
+    justify-self: center;
+    align-self: end;
+
+}
+
+.mainWelcome {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px 80px 90px 75px 230px;
+    grid-template-areas:
+        "main1"
+        "main2"
+        "main3"
+        "main4"
+        "main5";
+    /* "main6"; */
+
+}
+
+
+.description {
+    grid-area: main1;
+    justify-self: center;
+    align-self: end;
+    /* place-self: center; */
+    width: 372px;
+    font-size: 18px;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    color: #6DFB8C;
+    font-weight: bold;
+}
+
+.buttonSignWithGoogle{
+    grid-area: main2;
+    background-image: url(./image/google.png);
+    justify-self: center;
+    align-self: end;
+    width: 241px;
+    height: 53px;
+    border-radius: 5px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.orSelect{
+    grid-area: main3;
+    justify-self: center;
+    align-self: end;
+
+
+}
+
+.buttonLogin{
+    grid-area: main4;
+    justify-self: center;
+    align-self: end;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #000000;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ask {
+    grid-area: main5;
+    justify-self: center;
+    align-self: center;
+    font-family: 'Reem Kufi', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.buttonRegister {
+    grid-area: main5;
+    justify-self: center;
+    align-self: end;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #000000;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+.sectionRegister {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 776px;
+    grid-template-areas:
+        "header"
+        "main";
+}
+.mainRegister{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr; /* sólo tendrá una columna*/
+    grid-template-rows: 220px 80px 90px 75px 230px;
+    grid-template-areas:
+        "main1"
+        "main2"
+        "main3"
+        "main4"
+        "main5";
+}
+.createAnAccount{
+    grid-area: main1;
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Reem Kufi', sans-serif;
+    color:azure;
+    font-weight: bold;
+}
+.mail{
+    grid-area: main2;
+    background-color: #F2F0BD;
+    text-align: center;
+    font-size: 25px;
+    justify-self: center;
+    align-self: end;
+    width: 300px;
+    height: 49px;
+    border-radius: 5px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+.password{
+    grid-area: main3;
+    background-color: #F2F0BD;
+    text-align: center;
+    font-size: 25px;
+    justify-self: center;
+    align-self: end;
+    width: 300px;
+    height: 49px;
+    border-radius: 5px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+.buttonRegister1{
+    grid-area: main4;
+    justify-self: center;
+    align-self: end;
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: #000000;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+.buttonBack{
+    grid-area: main5;
+    justify-content: flex-start;
+    align-self:end;
+    width: 180px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: azure;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    color: #000000;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+.footer{
+    justify-self:center;
+    align-self: end;
+    width: 400px;
+    font-size: 18px;
+    text-align: justify;
+    font-family: 'Arial', sans-serif;
+    color: #F5EDA2;
+    font-weight: bold;
+
 }
