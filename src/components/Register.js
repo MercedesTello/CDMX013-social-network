@@ -1,27 +1,61 @@
 import { onNavigate } from '../main.js';
 
 export const Register = () => {
-  const div = document.createElement('div');
-  const title = document.createElement('h2');
-  const buttonStartSession = document.createElement('button');
+  const sectionRegister = document.createElement('section');
+  sectionRegister.setAttribute('class', 'sectionRegister');
+
+  // Header of Welcome
+  const header = document.createElement('header');
+  header.classList.add('header');
+
+  const imageLogo = document.createElement('img');
+  imageLogo.setAttribute('src', './image/logotaco.png');
+  imageLogo.setAttribute('class', 'imageLogo');
+  imageLogo.setAttribute('alt', 'Imagen de un taco');
+
+  header.append(imageLogo);
+
+  //  Main of Welcome
+  const mainRegister = document.createElement('main');
+  mainRegister.setAttribute('class', 'mainRegister');
+
+  const createAnAccount = document.createElement('p');
+  createAnAccount.classList.add('createAnAccount');
+  createAnAccount.textContent = 'Crea una cuenta';
+
+  const mail = document.createElement('input');
+  mail.classList.add('mail');
+  mail.placeholder = 'Correo electrónico';
+
+  const password = document.createElement('input');
+  password.classList.add('password');
+  password.placeholder = 'password';
+
+  const buttonRegister1 = document.createElement('button');
+  buttonRegister1.classList.add('buttonRegister1');
+  buttonRegister1.textContent = 'Regístrate';
+
   const buttonBack = document.createElement('button');
-  const inputEmail = document.createElement('input');
-  const inputPassword = document.createElement('input');
-  //const inputConfirmPassword = document.createElement('input');
-
-  title.textContent = 'Taquiero Much';
-  buttonStartSession.textContent = 'Regístrate';
+  buttonBack.classList.add('buttonBack');
   buttonBack.textContent = 'Regresar';
-  title.textContent = 'Crea una cuenta';
 
-  buttonStartSession.addEventListener('click', () => {
+  buttonRegister1.addEventListener('click', () => {
     onNavigate('/wall');
   });
+
   buttonBack.addEventListener('click', () => {
     onNavigate('/');
   });
 
-  div.append(title, inputEmail, inputPassword, buttonStartSession, buttonBack);
+  mainRegister.append(createAnAccount, mail, password, buttonRegister1, buttonBack);
 
-  return div;
+  // footer of Welcome
+
+  const footerWelcome = document.createElement('footer');
+  footerWelcome.classList.add('footer');
+  footerWelcome.textContent = 'Al registrarte, aceptas los Términos de servicio y la Política de privacidad, incluida la política de Uso de Cookies';
+
+  sectionRegister.append(header, mainRegister, footerWelcome);
+
+  return sectionRegister;
 };
