@@ -1,4 +1,5 @@
 import { onNavigate } from '../main.js';
+import { verCtaG } from '../lib/auth.js';
 
 export const Welcome = () => {
   const sectionWelcome = document.createElement('section');
@@ -9,7 +10,7 @@ export const Welcome = () => {
   header.classList.add('header');
 
   const imageLogo = document.createElement('img');
-  imageLogo.setAttribute('src', './image/logotaco.png');
+  imageLogo.setAttribute('src', './img/logotaco.png');
   imageLogo.setAttribute('class', 'imageLogo');
   imageLogo.setAttribute('alt', 'Imagen de un taco');
 
@@ -26,11 +27,6 @@ export const Welcome = () => {
   const buttonSignWithGoogle = document.createElement('button');
   buttonSignWithGoogle.classList.add('buttonSignWithGoogle');
 
-  const orSelect = document.createElement('img');
-  orSelect.setAttribute('src', './image/or.png');
-  orSelect.setAttribute('class', 'orSelect');
-  orSelect.setAttribute('alt', 'or');
-
   const buttonLogin = document.createElement('button');
   buttonLogin.textContent = 'Iniciar Sesión';
   buttonLogin.classList.add('buttonLogin');
@@ -42,12 +38,34 @@ export const Welcome = () => {
   buttonLogin.addEventListener('click', () => {
     onNavigate('/login');
   });
+  buttonSignWithGoogle.addEventListener('click', () => {
+    verCtaG().then((result) => {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      const credential = (result);
+      const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+
+      onNavigate('/home');
+
+      // ...
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = (error);
+      // ...
+    });
+  });
 
   const buttonRegister = document.createElement('button');
   buttonRegister.textContent = 'Regístrate';
   buttonRegister.classList = 'buttonRegister';
 
-  mainWelcome.append(description, buttonSignWithGoogle, orSelect, buttonLogin, ask, buttonRegister);
+  mainWelcome.append(description, buttonSignWithGoogle, buttonLogin, ask, buttonRegister);
 
   buttonRegister.addEventListener('click', () => {
     onNavigate('/register');

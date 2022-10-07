@@ -7,7 +7,7 @@ html {
 
 body {
 
-    background-image: url("./image/tacos.jpg");
+    background-image: url("./img/pexels-los-muertos-crew-7613568.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -30,8 +30,8 @@ body {
 
 .header {
     grid-area: header;
-    justify-self: center;
-    align-self: end;
+    /*justify-self: center;
+    align-self: end;*/
 
 }
 
@@ -60,30 +60,26 @@ body {
     font-size: 18px;
     text-align: justify;
     font-family: 'Montserrat', sans-serif;
-    color: #6DFB8C;
+    color: #E2E8A1;
     font-weight: bold;
+    background-color: #080000b8;
 }
 
-.buttonSignWithGoogle{
-    grid-area: main2;
-    background-image: url(./image/google.png);
-    justify-self: center;
-    align-self: end;
-    width: 241px;
-    height: 53px;
-    border-radius: 5px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+.buttonSignWithGoogle {
+    background-image: url(./img/btn_google_signin_light_normal_web.png);
+    background-size: cover;
+    width: 248px;
+    height: 61px;
+    /* background-size: cover; */
+    box-shadow: 10px 10px rgb(0 0 0 / 50%);
+    border-radius: 13px;
+    /* background-size: contain; */
+    margin-left: 121px;
+    margin-top: 37px;
+    background-repeat: no-repeat;
 }
 
-.orSelect{
-    grid-area: main3;
-    justify-self: center;
-    align-self: end;
-
-
-}
-
-.buttonLogin{
+.buttonLogin {
     grid-area: main4;
     justify-self: center;
     align-self: end;
@@ -104,7 +100,8 @@ body {
     font-family: 'Reem Kufi', sans-serif;
     font-size: 36px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: azure;
+    -webkit-text-stroke: #000000 1px;
 }
 
 .buttonRegister {
@@ -121,6 +118,7 @@ body {
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 
 }
+
 .sectionRegister {
     height: 100vh;
     width: 100vw;
@@ -131,10 +129,11 @@ body {
         "header"
         "main";
 }
-.mainRegister{
-    grid-area: main;
+
+.mainRegister {
     display: grid;
-    grid-template-columns: 1fr; /* sólo tendrá una columna*/
+    grid-template-columns: 1fr;
+    /* sólo tendrá una columna*/
     grid-template-rows: 220px 80px 90px 75px 230px;
     grid-template-areas:
         "main1"
@@ -143,18 +142,34 @@ body {
         "main4"
         "main5";
 }
-.createAnAccount{
-    grid-area: main1;
+
+.createAnAccount {
     justify-self: center;
     align-self: center;
     font-size: 30px;
     text-align: center;
     font-family: 'Reem Kufi', sans-serif;
-    color:azure;
+    color: azure;
     font-weight: bold;
+    background-color: #00000090;
+
 }
-.mail{
-    grid-area: main2;
+
+.inputReg {
+
+    background-color: #edd901d0;
+    text-align: center;
+    font-size: 20px;
+    justify-self: center;
+    align-self: end;
+    width: 320px;
+    height: 49px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*.password{
+    
     background-color: #F2F0BD;
     text-align: center;
     font-size: 25px;
@@ -164,21 +179,8 @@ body {
     height: 49px;
     border-radius: 5px;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
-}
-.password{
-    grid-area: main3;
-    background-color: #F2F0BD;
-    text-align: center;
-    font-size: 25px;
-    justify-self: center;
-    align-self: end;
-    width: 300px;
-    height: 49px;
-    border-radius: 5px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
-}
-.buttonRegister1{
-    grid-area: main4;
+}*/
+.buttonRegister1 {
     justify-self: center;
     align-self: end;
     width: 180px;
@@ -191,21 +193,21 @@ body {
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 
 }
-.buttonBack{
-    grid-area: main5;
+
+.buttonBack {
     justify-content: flex-start;
-    align-self:end;
-    width: 180px;
-    height: 50px;
+    background-image: url('./img/back.png');
+    background-repeat: no-repeat;
+    background-size: 60px;
+    align-self: end;
+    width: 67px;
+    height: 62px;
     border-radius: 20px;
-    background-color: azure;
-    font-family: 'Roboto', sans-serif;
-    font-size: 25px;
-    color: #000000;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
 }
-.footer{
-    justify-self:center;
+
+.footer {
+    justify-self: center;
     align-self: end;
     width: 400px;
     font-size: 18px;
@@ -214,4 +216,123 @@ body {
     color: #F5EDA2;
     font-weight: bold;
 
+}
+
+.sectionHome {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:auto;
+    grid-template-areas:
+        "header"
+        "main";
+}
+
+.mainHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.post{
+    
+    background-color: #edd901d0;
+    background-image: url(./img/taquero.png);
+    background-repeat: no-repeat;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    justify-self: center;
+    width: 347px;
+    height: 49px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(0 0 0 / 50%);
+}
+    
+.post-container{
+    background-color: #edd901d0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    width: 356px;
+    height: 337px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgb(0 0 0 / 50%);
+}
+
+.container-post{
+    color: #080000b8;
+    width: 250px;
+    height: 250px;
+}
+
+.container-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.edit{
+    background-image: url(./img/edit.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 54px;
+    height: 55px;
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+.delete{
+    background-image: url(./img/delete.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+    width: 54px;
+    height: 55px;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+}
+.tacoLike{
+    background-image: url(./img/megusta.png);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-color: black;
+    width: 54px;
+    height: 55px;
+    /* margin-top: 17rem; */
+    border-radius: 20px;
+
+}
+
+.upLoadPost{
+    justify-content: center;
+    background-image: url(./img/send.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color:chartreuse;
+    margin-left: 289px;
+    margin-bottom: 1rem;
+    width: 54px;
+    height: 55px;
+    border-radius: 13px;
+    box-shadow: 10px 10px rgb(0 0 0 / 50%);
+}
+
+.buttonLogOut{
+    background-image: url(./img/image10.png);
+    background-repeat: no-repeat;
+    background-color:chartreuse;
+    width: 76px;
+    height: 76px;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    left: 10rem;
+    bottom: 7rem;
+    margin-bottom: 2rem;
+}
+.readPost{
+    color: #00000090;
 }
