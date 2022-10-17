@@ -10,18 +10,12 @@ const db = getFirestore(app);
 const dbRef = collection(db, 'post');
 export const save = (post) => addDoc(dbRef, post);
 
-export const data = () => getDocs(collection(db, 'post'));
+export const data = (id) => getDocs(collection(db, 'post'), id);
 
 export const onGetPost = (callback) => onSnapshot(collection(db, 'post'), callback);
 
-export const deletePost = (id) => {
-  getPost(id).then(result => {
-    console.log('EL RESULT', result['_document'].data.value.mapValue.fields.author.stringValue);
-    console.log('la user', auth.currentUser.uid);
-  }).catch(error=> console.log('EL ERROR', error));
-  // return deleteDoc(doc(db, 'post', id));
+export const deletePost = (id) => deleteDoc(doc(db, 'post', id));
 
-};
 export const getPost = (id) => getDoc(doc(db, 'post', id));
 
 export const updatePost = (id, newPost) => updateDoc(doc(db, 'post', id), newPost);
