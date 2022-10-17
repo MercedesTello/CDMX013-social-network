@@ -38,7 +38,7 @@ export const Home = () => {
       save({
         post: post.value,
         date: new Date(),
-        author: auth.currentUser.uid,
+        author: auth.currentUser.email,
 
       }).then(() => {
         post.value = '';
@@ -94,14 +94,14 @@ export const Home = () => {
     });
 
     // buttonDiv.append(tacoLike, buttonEdit, buttonDelete);
-    if (auth.currentUser.uid === cont.author) {
+    if (auth.currentUser.email === cont.author) {
       buttonDiv.append(tacoLike, buttonEdit, buttonDelete);
     } else {
       buttonDiv.append(tacoLike);
     }
 
     publications.append(read, buttonDiv);
-    read.append(/* cont.author, */ cont.post);
+    read.append(cont.author, cont.post);
     mainHome.append(publications);
   };
 
