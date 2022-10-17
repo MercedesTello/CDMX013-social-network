@@ -93,10 +93,15 @@ export const Home = () => {
       editStatus = true; // para saber si está guardando o editando
     });
 
-    buttonDiv.append(tacoLike, buttonEdit, buttonDelete);
+    // buttonDiv.append(tacoLike, buttonEdit, buttonDelete);
+    if (auth.currentUser.uid === cont.author) {
+      buttonDiv.append(tacoLike, buttonEdit, buttonDelete);
+    } else {
+      buttonDiv.append(tacoLike);
+    }
 
     publications.append(read, buttonDiv);
-    read.append(userComment, cont.post);
+    read.append(/* cont.author, */ cont.post);
     mainHome.append(publications);
   };
 
@@ -108,7 +113,6 @@ export const Home = () => {
 
     querySnapshot.forEach((doc) => {
       const task = doc.data();
-      const postContent = task.post;
 
       const docId = doc.id;
 
