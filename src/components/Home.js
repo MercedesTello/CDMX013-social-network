@@ -66,6 +66,11 @@ export const Home = () => {
 
     const userComment = document.createElement('h3');
     userComment.classList.add('user');
+    userComment.textContent = cont.author;
+
+    const content = document.createElement('p');
+    content.classList.add('content');
+    content.textContent = cont.post;
 
     const buttonDiv = document.createElement('div');
     buttonDiv.classList.add('container-buttons');
@@ -80,6 +85,8 @@ export const Home = () => {
 
     const tacoLike = document.createElement('button');
     tacoLike.classList.add('tacoLike');
+    const likesCount = 0;
+    tacoLike.textContent = likesCount;
 
     buttonDelete.addEventListener('click', (e) => {
       deletePost(e.target.dataset.id);
@@ -101,7 +108,7 @@ export const Home = () => {
     }
 
     publications.append(read, buttonDiv);
-    read.append(cont.author, cont.post);
+    read.append(userComment, content);
     mainHome.append(publications);
   };
 

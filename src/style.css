@@ -239,7 +239,7 @@ body {
 
 .post{
     
-    background-color: #edd901d0;
+    background-color: #e2e8a1;
     background-image: url(./img/taquero.png);
     background-repeat: no-repeat;
     font-size: 20px;
@@ -257,7 +257,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-   background-color: rgba(241, 248, 23, 0.648);
+    background-color: #e2e8a1c7;
     width: 372px;
     height: 277px;
     border-radius: 10px;
@@ -267,19 +267,18 @@ body {
 
 .container-post{
 
-    background-color: rgba(0, 0, 0, 0.26);
+    background-color: rgb(163 167 5 / 25%);
     background-repeat: no-repeat;
-    width: 276px;
+    width: 308px;
     height: 220px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 22px;
     margin-top: 15px;
 }
 .user{
-    width: 241px;
+    width: 289px;
     height: 30px;
-    background-color: #f1ee43ab;
-
+    background-color: #cacaafab;
 }
 
 .container-buttons{
@@ -292,41 +291,45 @@ body {
     background-image: url(./img/editar.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 49px;
+    width: 59px;
     height: 49px;
-    background-color:transparent;
+    background-color: #e2deced6;
     border-radius: 20px;
-    box-shadow: 10px 10px rgba(47, 30, 30, 0.5);
+    /*box-shadow: 7px 7px rgba(0, 0, 0, 0.5);*/
 }
+
 .delete{
     background-image: url(./img/borrar.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-color: transparent;
-    width: 49px;
+    background-color: #e2deced6;
+    width: 59px;
     height: 49px;
     border-radius: 20px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 7px 7px rgba(0, 0, 0, 0.5);*/
 }
 
 .tacoLike{
-    background-image: url(./img/Like_Line.png);
+    background-image: url(./img/like.png);
     background-repeat: no-repeat;
-    background-size: 60px;
-    background-color: transparent;
-    width: 49px;
+    background-size: 152px;
+    background-position: center;
+    background-color: #e2deced6;
+    font-size: 20px;
+    font-weight: bold;
+    width: 59px;
     height: 49px;
     border-radius: 20px;
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
-
+    /*box-shadow: 7px 7px rgb(0 0 0 / 50%);*/
 }
+
 
 .upLoadPost{
     justify-content: center;
     background-image: url(./img/send.png);
     background-repeat: no-repeat;
     background-size: contain;
-    background-color:chartreuse;
+    background-color:#e9eadfd1;
     margin-left: 289px;
     margin-bottom: 1rem;
     width: 54px;
@@ -338,7 +341,7 @@ body {
 .buttonLogOut{
     background-image: url(./img/close.png);
     background-repeat: no-repeat;
-    background-color:chartreuse;
+    background-color:#e9eadfd1;
     width: 76px;
     height: 76px;
     border-radius: 20px;

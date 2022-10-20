@@ -2,13 +2,13 @@
 import {
   getFirestore, collection, addDoc, getDocs, onSnapshot, doc, deleteDoc, getDoc, updateDoc,
 } from 'https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js';
-import { auth } from './auth.js';
 import { app } from './config.js';
 
 const db = getFirestore(app);
 
 const dbRef = collection(db, 'post');
-export const save = (post) => addDoc(dbRef, post);
+
+export const save = (post) => addDoc(dbRef, (post));
 
 export const data = (id) => getDocs(collection(db, 'post'), id);
 
